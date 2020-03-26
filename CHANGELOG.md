@@ -113,6 +113,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
     - `listS3Objects()`
     - `promiseS3Upload()`
     - `publishSnsMessage()`
+    - `pullStepFunctionEvent()`
     - `putJsonS3Object()`
     - `receiveSQSMessages()`
     - `s3CopyObject()`
@@ -136,6 +137,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - Removed `@cumulus/common/errors`
   - Removed `@cumulus/common/sfnStep`
   - Removed `@cumulus/common/sftp`
+  - Removed `@cumulus/common/StepFunctions`
   - Removed `@cumulus/common/string.unicodeEscape`
   - Removed `@cumulus/cmrjs/cmr-utils.getGranuleId()`
   - Removed `@cumulus/cmrjs/cmr-utils.getCmrFiles()`
