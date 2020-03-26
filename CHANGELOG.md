@@ -18,13 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - **CUMULUS-1732**
   - Added Python task/activity workflow and integration test (`PythonReferenceSpec`) to test `cumulus-message-adapter-python`and `cumulus-process-py` integration.
+- **CUMULUS-1795**
+  - Added an IAM policy on the Cumulus EC2 creation to enable SSM when the `deploy_to_ngap` flag is true
 - **CUMULUS-1799**
   - Added `@cumulus/common/stack.getBucketsConfigKey()` to return the S3 key for the buckets config object
   - Added `@cumulus/common/workflows.getWorkflowFileKey()` to return the S3 key for a workflow definition object
   - Added `@cumulus/common/workflows.getWorkflowsListKeyPrefix()` to return the S3 key prefix for objects containing workflow definitions
-
-- **CUMULUS-1795**
-  - Added an IAM policy on the Cumulus EC2 creation to enable SSM when the `deploy_to_ngap` flag is true
+  - Added `@cumulus/message` package containing utilities for building and parsing Cumulus messages
 
 ### Changed
 
@@ -47,6 +47,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - Deprecate `@cumulus/common/config.resolveResource()`
   - Deprecate `@cumulus/common/config.resourceToArn()`
   - Deprecate `@cumulus/common/FieldPattern`
+  - Deprecate `@cumulus/common/message.getMessageFromTemplate()`
   - Deprecate `@cumulus/common/Semaphore`
   - Deprecate `@cumulus/common/test-utils.throttleOnce()`
   - Deprecate `@cumulus/common/workflows.getWorkflowArn()`
