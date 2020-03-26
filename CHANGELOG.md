@@ -40,6 +40,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - `@cumulus/aws-client/StepFunctions.getExecutionArn()` => `@cumulus/message/executions.buildExecutionArn()`
   - `@cumulus/aws-client/StepFunctions.getExecutionUrl()` => `@cumulus/message/executions.getExecutionUrlFromArn()`
   - `@cumulus/aws-client/StepFunctions.getStateMachineArn()` => `@cumulus/message/executions.getStateMachineArnFromExecutionArn()`
+  - `@cumulus/aws-client/StepFunctions.pullStepFunctionEvent()` -> `@cumulus/message/StepFunctions.pullStepFunctionEvent()`
   - `@cumulus/common/bucketsConfigJsonObject()`
   - `@cumulus/common/CloudWatchLogger`
   - `@cumulus/common/concurrency.limit()`
@@ -70,6 +71,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - `@cumulus/common/workflows.getWorkflowFile()`
   - `@cumulus/common/workflows.getWorkflowList()`
   - `@cumulus/common/workflows.getWorkflowTemplate()`
+  - `@cumulus/integration-tests/sfnStep/SfnStep.parseStepMessage()` -> `@cumulus/message/StepFunctions.parseStepMessage()`
 
 ### Removed
 
