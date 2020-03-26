@@ -31,6 +31,7 @@ const { globalReplace } = require('@cumulus/common/string');
 const { sleep } = require('@cumulus/common/util');
 const ProvidersModel = require('@cumulus/api/models/providers');
 const RulesModel = require('@cumulus/api/models/rules');
+const { pullStepFunctionEvent } = require('@cumulus/message/StepFunctions');
 
 const api = require('./api/api');
 const collectionsApi = require('./api/collections');
@@ -121,7 +122,7 @@ const getExecutionOutput = (executionArn) =>
   StepFunctions.describeExecution({ executionArn })
     .then((execution) => execution.output)
     .then(JSON.parse)
-    .then(StepFunctions.pullStepFunctionEvent);
+    .then(pullStepFunctionEvent);
 
 async function getExecutionInputObject(executionArn) {
   return JSON.parse(await getExecutionInput(executionArn));
@@ -913,7 +914,7 @@ async function waitForTestExecutionStart({
       const execution = executions[executionCtr];
       let taskInput = await lambdaStep.getStepInput(execution.executionArn, startTask);
       if (taskInput) {
-        taskInput = await StepFunctions.pullStepFunctionEvent(taskInput);
+        taskInput = await pullStepFunctionEvent(taskInput);
       }
       if (taskInput && findExecutionFn(taskInput, findExecutionFnParams)) {
         return execution;
