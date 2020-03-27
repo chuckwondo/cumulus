@@ -13,6 +13,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   name and version match what is in the message for these ingest messages to be processed.
   If no matching rule is found, an error will be thrown and logged in the
   `messageConsumer` Lambda function's log group.
+- **CUMULUS-1799** - Added 2 new packages:
+  - `@cumulus/collection-config-store` - Contains class for persisting collection configuration to S3 and retrieving it
+  - `@cumulus/message` - Contains utilities for building and parsing Cumulus messages
 
 ### Added
 
@@ -24,7 +27,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - Added `@cumulus/common/stack.getBucketsConfigKey()` to return the S3 key for the buckets config object
   - Added `@cumulus/common/workflows.getWorkflowFileKey()` to return the S3 key for a workflow definition object
   - Added `@cumulus/common/workflows.getWorkflowsListKeyPrefix()` to return the S3 key prefix for objects containing workflow definitions
-  - Added `@cumulus/message` package containing utilities for building and parsing Cumulus messages
 
 ### Changed
 
@@ -44,6 +46,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - `@cumulus/common/bucketsConfigJsonObject()`
   - `@cumulus/common/CloudWatchLogger`
   - `@cumulus/common/concurrency.limit()`
+  - `@cumulus/common/collection-config-store/CollectionConfigStore` -> `@cumulus/collection-config-store`
   - `@cumulus/common/collection-config-store.constructCollectionId()` -> `@cumulus/message/collections.constructCollectionId`
   - `@cumulus/common/concurrency.mapTolerant()`
   - `@cumulus/common/concurrency.promiseUrl()`
