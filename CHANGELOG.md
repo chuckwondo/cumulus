@@ -58,6 +58,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - `@cumulus/common/config.resolveResource()`
   - `@cumulus/common/config.resourceToArn()`
   - `@cumulus/common/FieldPattern`
+  - `@cumulus/common/launchpad.getLaunchpadToken()` -> `@cumulus/launchpad-auth/index.getLaunchpadToken()`
+  - `@cumulus/common/LaunchpadToken` -> `@cumulus/launchpad-auth/LaunchpadToken`
+  - `@cumulus/common/launchpad.validateLaunchpadToken()` -> `@cumulus/launchpad-auth/index.validateLaunchpadToken()`
   - `@cumulus/common/message.buildCumulusMeta()` -> `@cumulus/message/build.buildCumulusMeta()`
   - `@cumulus/common/message.buildQueueMessageFromTemplate()` -> `@cumulus/message/build.buildQueueMessageFromTemplate()`
   - `@cumulus/common/message.getCollectionIdFromMessage()` -> `@cumulus/message/collections.getCollectionIdFromMessage()`
