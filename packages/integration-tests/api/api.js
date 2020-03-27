@@ -3,7 +3,7 @@
 const cloneDeep = require('lodash.clonedeep');
 const pRetry = require('p-retry');
 const { lambda } = require('@cumulus/aws-client/services');
-const launchpad = require('@cumulus/common/launchpad');
+const launchpad = require('@cumulus/launchpad-auth');
 const {
   models: { AccessToken },
   testUtils: { fakeAccessTokenFactory },
