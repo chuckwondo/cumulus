@@ -3,7 +3,7 @@
 const get = require('lodash.get');
 const pMap = require('p-map');
 const { AttributeValue } = require('dynamodb-data-types');
-const { constructCollectionId } = require('@cumulus/common/collection-config-store');
+const { constructCollectionId } = require('@cumulus/message/collections');
 const log = require('@cumulus/common/log');
 const FileClass = require('../models/files');
 const indexer = require('../es/indexer');
