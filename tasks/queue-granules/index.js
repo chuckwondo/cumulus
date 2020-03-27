@@ -3,7 +3,7 @@
 const get = require('lodash.get');
 const cumulusMessageAdapter = require('@cumulus/cumulus-message-adapter-js');
 const { enqueueGranuleIngestMessage } = require('@cumulus/ingest/queue');
-const { CollectionConfigStore } = require('@cumulus/common/collection-config-store');
+const CollectionConfigStore = require('@cumulus/collection-config-store');
 const { buildExecutionArn } = require('@cumulus/message/executions');
 
 /**
