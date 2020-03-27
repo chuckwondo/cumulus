@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   `messageConsumer` Lambda function's log group.
 - **CUMULUS-1799** - Added 2 new packages:
   - `@cumulus/collection-config-store` - Contains class for persisting collection configuration to S3 and retrieving it
+  - `@cumulus/launchpad-auth` - Contains utilities for authentication with Launchpad
   - `@cumulus/message` - Contains utilities for building and parsing Cumulus messages
 
 ### Added
